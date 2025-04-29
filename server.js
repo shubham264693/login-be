@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // Routes
 app.post('/login', users.login);
 app.post('/register', users.register);
-app.get('/healthCheck',(res,res)=>{
+app.get('/healthCheck',(req,res)=>{
   return res.status(200).json({message : "Health Check Ok"})
 })
 
