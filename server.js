@@ -7,7 +7,13 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://d2jx3s04xdlmcc.cloudfront.net', // Only allow your CloudFront domain
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
 // Routes
