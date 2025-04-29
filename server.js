@@ -14,14 +14,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(morgan('combined'));
 
-app.use((req, res, next) => {
-  res.setHeader('Transfer-Encoding', '');
-  next();
-});
-app.use((_req, res, next) => {
-  res.header("Server", "");
-  next();
-}); 
+// app.use((req, res, next) => {
+//   res.setHeader('Transfer-Encoding', '');
+//   next();
+// });
+// app.use((_req, res, next) => {
+//   res.header("Server", "");
+//   next();
+// }); 
 
 // Routes
 app.post('/login', users.login);
