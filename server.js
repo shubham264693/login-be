@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 // Routes
 app.post('/login', users.login);
 app.post('/register', users.register);
+app.get('/healthCheck',(res,res)=>{
+  return res.status(200).json({message : "Health Check Ok"})
+})
 
 // Start server
 app.listen(PORT, () => {
